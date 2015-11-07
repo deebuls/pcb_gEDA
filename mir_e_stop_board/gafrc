@@ -1,0 +1,3 @@
+(component-library "../gschem-sym")
+(component-library "../gschem-sym/transistors")
+(component-library "../gschem-sym/relays")

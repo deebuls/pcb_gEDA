@@ -1,0 +1,307 @@
+# release: pcb 1.99x
+# To read pcb files, the pcb version (or the cvs source date) must be >= the file version
+FileVersion[20070407]
+PCB["" 600000 500000]
+Grid[10000.000000 0 0 0]
+Cursor[0 0 0.000000]
+PolyArea[200000000.000000]
+Thermal[0.500000]
+DRC[1000 1000 1000 1000 1500 1000]
+Flags("nameonpcb,uniquename,clearnew,snappin")
+Groups("1,c:2,s:3:4:5:6:7:8")
+Styles["Signal,1000,3600,2000,1000:Power,2500,6000,3500,1000:Fat,4000,6000,3500,1000:Skinny,600,2402,1181,600"]
+
+	
+Element(0x00 "CONNECTOR-2-1" "CONN201" "unknown" 160 0 3 100 0x00)
+(
+	Pin(50 50 60 38 "1" 0x101)
+	 Pin(50 150 60 38 "2" 0x01)
+	 
+	ElementLine(0 0 0 200 10)
+	ElementLine(0 200 100 200 10)
+	ElementLine(100 200 100 0 10)
+	ElementLine(100 0 0 0 10)
+	ElementLine(0 100 100 100 10)
+	ElementLine(100 100 100 0 10)
+	Mark(50 50)
+)
+Element(0x00 "TO92" "Q201" "unknown" 60 70 0 100 0x00)
+(
+
+# The JEDEC drawing shows a pin diameter of 16-21 mils
+#
+#
+#         _______
+# TO92:  | 1 2 3 |   <-- bottom view
+#         \_____/
+#       
+# The pin to pin spacing is 100 mils.
+	Pin(250 200 72 42 "1" 0x101)
+	Pin(150 200 72 42 "2" 0x01)
+	Pin(50 200 72 42 "3" 0x01)
+
+	ElementArc(150 200 100 100 315 270 10)
+	ElementLine( 80 130 220 130 10)
+
+	Mark(50 200)
+)
+Element(0x00 "R025" "R201" "unknown" 120 30 0 100 0x00)
+(
+	Pin(0 50 68 38 "1" 0x101)
+	Pin(400 50 68 38 "2" 0x01)
+	ElementLine(100 0 300 0 20)
+	ElementLine(300 0 300 100 20)
+	ElementLine(300 100 100 100 20)
+	ElementLine(100 100 100 0 20)
+	ElementLine(0 50 100 50 20)
+	ElementLine(300 50 400 50 20)
+	Mark(0 50)
+)
+
+	# number of pads
+	
+	# pad width in 1/1000 mil
+        
+	# pad length in 1/1000 mil
+        
+	# pad pitch 1/1000 mil
+	
+	# seperation between pads on opposite sides 1/1000 mil
+	
+
+	# X coordinates for the right hand column of pads (1/100 mils)
+        
+        
+
+	# pad clearance to plane layer in 1/100 mil
+        
+
+	# pad soldermask width in 1/100 mil
+        
+
+	# silk screen width (1/100 mils)
+	
+	
+
+
+	# figure out if we have an even or odd number of pins per side
+	
+	
+	
+
+	# silk bounding box is -XMAX,-YMAX, XMAX,YMAX (1/100 mils)
+	
+	
+
+	
+
+	
+		
+# element_flags, description, pcb-name, value, mark_x, mark_y,
+# text_x, text_y, text_direction, text_scale, text_flags
+Element[0x00000000 "SO8" "U102" "unknown" 0 0 -2000 -6000 0 100 0x00000000]
+(
+# 
+# Pad[x1, y1, x2, y2, thickness, clearance, mask, name , pad number, flags]
+        Pad[   -13500 -7500 
+			 -7000 -7500 
+			2000 1000 3000 "1" "1" 0x00000100]
+
+		
+			
+        Pad[   -13500 -2500 
+			 -7000 -2500 
+			2000 1000 3000 "2" "2" 0x00000100]
+
+		
+			
+        Pad[   -13500 2500 
+			 -7000 2500 
+			2000 1000 3000 "3" "3" 0x00000100]
+
+		
+			
+        Pad[   -13500 7500 
+			 -7000 7500 
+			2000 1000 3000 "4" "4" 0x00000100]
+
+		
+			
+        
+        Pad[   13500 7500 
+			 7000 7500 
+			2000 1000 3000 "5" "5" 0x00000100]
+		
+			
+        Pad[   13500 2500 
+			 7000 2500 
+			2000 1000 3000 "6" "6" 0x00000100]
+		
+			
+        Pad[   13500 -2500 
+			 7000 -2500 
+			2000 1000 3000 "7" "7" 0x00000100]
+		
+			
+        Pad[   13500 -7500 
+			 7000 -7500 
+			2000 1000 3000 "8" "8" 0x00000100]
+		
+			
+        
+
+	ElementLine[-15500 -9500 -15500  9500 1000]
+	ElementLine[-15500  9500  15500  9500 1000]
+	ElementLine[ 15500  9500  15500 -9500 1000]
+	ElementLine[-15500 -9500 -2500 -9500 1000]
+	ElementLine[ 15500 -9500  2500 -9500 1000]
+
+	# punt on the arc on small parts as it can cover the pads
+	ElementArc[0 -9500 2500 2500 0 180 1000]
+	
+)
+
+	# number of pads
+	
+	# pad width in 1/1000 mil
+        
+	# pad length in 1/1000 mil
+        
+	# pad pitch 1/1000 mil
+	
+	# seperation between pads on opposite sides 1/1000 mil
+	
+
+	# X coordinates for the right hand column of pads (1/100 mils)
+        
+        
+
+	# pad clearance to plane layer in 1/100 mil
+        
+
+	# pad soldermask width in 1/100 mil
+        
+
+	# silk screen width (1/100 mils)
+	
+	
+
+
+	# figure out if we have an even or odd number of pins per side
+	
+	
+	
+
+	# silk bounding box is -XMAX,-YMAX, XMAX,YMAX (1/100 mils)
+	
+	
+
+	
+
+	
+		
+# element_flags, description, pcb-name, value, mark_x, mark_y,
+# text_x, text_y, text_direction, text_scale, text_flags
+Element[0x00000000 "SO8" "U101" "unknown" 0 0 -2000 -6000 0 100 0x00000000]
+(
+# 
+# Pad[x1, y1, x2, y2, thickness, clearance, mask, name , pad number, flags]
+        Pad[   -13500 -7500 
+			 -7000 -7500 
+			2000 1000 3000 "1" "1" 0x00000100]
+
+		
+			
+        Pad[   -13500 -2500 
+			 -7000 -2500 
+			2000 1000 3000 "2" "2" 0x00000100]
+
+		
+			
+        Pad[   -13500 2500 
+			 -7000 2500 
+			2000 1000 3000 "3" "3" 0x00000100]
+
+		
+			
+        Pad[   -13500 7500 
+			 -7000 7500 
+			2000 1000 3000 "4" "4" 0x00000100]
+
+		
+			
+        
+        Pad[   13500 7500 
+			 7000 7500 
+			2000 1000 3000 "5" "5" 0x00000100]
+		
+			
+        Pad[   13500 2500 
+			 7000 2500 
+			2000 1000 3000 "6" "6" 0x00000100]
+		
+			
+        Pad[   13500 -2500 
+			 7000 -2500 
+			2000 1000 3000 "7" "7" 0x00000100]
+		
+			
+        Pad[   13500 -7500 
+			 7000 -7500 
+			2000 1000 3000 "8" "8" 0x00000100]
+		
+			
+        
+
+	ElementLine[-15500 -9500 -15500  9500 1000]
+	ElementLine[-15500  9500  15500  9500 1000]
+	ElementLine[ 15500  9500  15500 -9500 1000]
+	ElementLine[-15500 -9500 -2500 -9500 1000]
+	ElementLine[ 15500 -9500  2500 -9500 1000]
+
+	# punt on the arc on small parts as it can cover the pads
+	ElementArc[0 -9500 2500 2500 0 180 1000]
+	
+)
+Element(0x00 "R025" "R101" "10k" 120 30 0 100 0x00)
+(
+	Pin(0 50 68 38 "1" 0x101)
+	Pin(400 50 68 38 "2" 0x01)
+	ElementLine(100 0 300 0 20)
+	ElementLine(300 0 300 100 20)
+	ElementLine(300 100 100 100 20)
+	ElementLine(100 100 100 0 20)
+	ElementLine(0 50 100 50 20)
+	ElementLine(300 50 400 50 20)
+	Mark(0 50)
+)
+Layer(1 "component")
+(
+)
+Layer(2 "solder")
+(
+)
+Layer(3 "outline")
+(
+)
+Layer(4 "GND")
+(
+)
+Layer(5 "power")
+(
+)
+Layer(6 "signal1")
+(
+)
+Layer(7 "signal2")
+(
+)
+Layer(8 "signal3")
+(
+)
+Layer(9 "silk")
+(
+)
+Layer(10 "silk")
+(
+)
